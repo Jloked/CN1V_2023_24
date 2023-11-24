@@ -1,20 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 # Evaluamos el polinomio p(x) = (x-1)^5 de tres formas diferentes
 def p1(x):
     return (x-1)**5
 
-
 def p2(x):
-    z = x**5 - 5*(x**4) + 10*(x**2) + 5*x - 1
     return x**5 - 5*(x**4) + 10*(x**2) + 5*x - 1
-
 
 def p3(x):
     return -1+x*(5+x*(-10+x*(10+x*(-5+x))))
-
 
 # Precisión doble
 x = np.linspace(0.998, 1.002, 1000, dtype='float64')

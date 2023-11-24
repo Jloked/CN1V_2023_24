@@ -1,7 +1,5 @@
 import numpy as np
-%matplotlib inline
 from matplotlib import pyplot as plt
-
 
 # Defino f
 def f(x):
