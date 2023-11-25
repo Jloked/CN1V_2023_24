@@ -30,6 +30,4 @@ if __name__ == '__main__':
     print(z)
     z = polynomial.Polynomial(z)  # convierto z en un polinomio (para numpy)
     print(z)
-    f = polynomial.hermite.
-    print(f)
     # print(interpolNewton(x, y)) esto da error (como debe ser)
