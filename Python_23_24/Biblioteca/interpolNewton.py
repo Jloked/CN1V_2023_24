@@ -28,6 +28,4 @@ if __name__ == '__main__':
     y = np.array([1, 2, 3, 4])
     z = interpolNewton(x, x)
     print(z)
-    z = polynomial.Polynomial(z)  # convierto z en un polinomio (para numpy)
-    print(z)
     # print(interpolNewton(x, y)) esto da error (como debe ser)
