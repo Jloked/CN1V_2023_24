@@ -27,3 +27,4 @@ if __name__ == '__main__':
     print('f(x) = x^3 - 2007')
     print('Aproximacion: %.16f | Iteraciones: %d' % biseccion(f, 12, 13, 10**-1, 100))
     print('Aproximacion: %.16f | Iteraciones: %d' % biseccion(f, 12, 13, 10 ** -12, 1000))
+    print(biseccion(lambda x: np.cos(10*x), 0, 1, 10**-5,100))
