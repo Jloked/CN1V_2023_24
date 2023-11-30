@@ -41,7 +41,7 @@ def interpol_newton(x: np.ndarray, y: np.ndarray, t: np.ndarray):
     return pt
 
 
-if __name__ == '__main__':
+def main():
     import matplotlib.pyplot as plt
 
     x = np.array([1, 2, 3, 4, 5, 6])
@@ -55,4 +55,8 @@ if __name__ == '__main__':
 
     ax.plot(np.linspace(0, 2, 100), interpol_newton(x, x, np.linspace(0, 2, 100)))
     plt.show()
+
+
+if __name__ == '__main__':
+    main()
     # print(interpolNewton(x, y)) esto da error (como debe ser)
