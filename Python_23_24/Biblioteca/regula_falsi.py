@@ -28,4 +28,4 @@ if __name__ == '__main__':
     print('f(x) = x^3 - 2007')
     print('Aproximacion: %.16f | Iteraciones: %d' % regula_falsi(f, 12, 13, 10 ** -1, 100))
     print('Aproximacion: %.16f | Iteraciones: %d' % regula_falsi(f, 12, 13, 10 ** -12, 1000))
-    print(regula_falsi(lambda x: np.cos(10 * x), 0, 1, 10 ** -5, 100))
+    print('Aproximacion: %.16f | Iteraciones: %d' % regula_falsi(lambda x: np.tan(x) - np.tanh(x), 2.5, 4.5, 10 ** -5, 100))
