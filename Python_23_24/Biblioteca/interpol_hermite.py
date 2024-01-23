@@ -23,7 +23,7 @@ def coef_hermite(x: np.ndarray, y: list):
         for j in range(aux[i], aux[i + 1]):
             nodos_rep[j - 1] = x[i]
 
-    for k in range(n):  # no va
+    for k in range(n):  # TODO creo que no va por algo de aqui
         for i in range(m, -1, -1):
             for j in range(aux[i] - 2, max(aux[i - 1], k + 1) - 2, -1):
                 if nodos_rep[j - k] == nodos_rep[j]:
@@ -34,7 +34,7 @@ def coef_hermite(x: np.ndarray, y: list):
     return coef, nodos_rep
 
 
-def interpol_hermite(x: np.ndarray, y: list, t: np.ndarray):
+def interpol_hermite(x: np.ndarray, y: list, t: np.ndarray):  # TODO
     pass
 
 
