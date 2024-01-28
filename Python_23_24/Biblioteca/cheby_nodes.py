@@ -8,7 +8,7 @@ import numpy as np
 
 def cheby_nodes(a, b, n):
     """
-    Devuelve los ceros de Chebyshev de grado n en el intervalo [a,b]
+    Devuelve los ceros del polinomio de Chebyshev de grado n en el intervalo [a,b]
     :param a: extremo inferior del intervalo
     :param b: extremo superior del intervalo
     :param n: grado del polinomio de Chebyshev
