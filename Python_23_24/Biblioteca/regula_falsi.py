@@ -1,7 +1,20 @@
+"""
+Método de la regla falsa o regula-falsi
+https://es.wikipedia.org/wiki/M%C3%A9todo_de_la_regla_falsa
+"""
 import numpy as np
 
 
 def regula_falsi(f, a: float, b: float, tol: float, max_iter: int):
+    """
+    Busca un cero de una funcion continua en un intervalo [a,b], la funcion debe verificar f(a)f(b)<0
+    :param f: funcion
+    :param a: extremo inferior del intervalo
+    :param b: extremo superior del intervalo
+    :param tol: tolerancia
+    :param max_iter: maximo de iteraciones permitidas
+    :return: c = aproximacion del cero, k = numero de iteraciones
+    """
     aa, bb, fa, fb = a, b, f(a), f(b)
     if fa * fb > 0:
         raise Exception('No hay cambio de signo')
