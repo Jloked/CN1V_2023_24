@@ -3,17 +3,17 @@ from math import factorial
 from interpol_newton import polinomio_newton
 
 
-def coef_hermite(x: np.ndarray, y: list):
-    m = np.size(x)
+def coef_hermite(x: list, y: list):
+    m = len(x)
 
     if len(y) != m:
         raise Exception('Las dimensiones de x e y no coinciden')
 
-    l = np.zeros(m, dtype=int)
-    aux = np.ones(m + 1, dtype=int)
+    l = [0]*m
+    aux = [1] * (m+1)
 
     for i in range(m):
-        l[i] = np.size(y[i])
+        l[i] = len(y[i])
         aux[i + 1] = aux[i] + l[i]
     n = aux[m] - 2
     nodos_rep = np.zeros(n + 1)
