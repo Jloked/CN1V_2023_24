@@ -11,7 +11,7 @@ def coef_newton(x: np.ndarray, y: np.ndarray):
     Devuelve los coeficientes en la forma de Newton del polinomio que interpola los puntos de abscisas x, ordenadas y
     :param x: abscisas de los puntos a interpolar
     :param y: ordenadas de los puntos a interpolar
-    :return: np.array de coeficientes
+    :return: array de coeficientes
     """
     if x.ndim > 1 or y.ndim > 1:
         raise Exception('Las dimensiones de x e y son incorrectas')
@@ -50,7 +50,7 @@ def polinomio_newton(coef: np.ndarray, nodos: np.ndarray):
 def interpol_newton(x: np.ndarray, y: np.ndarray, t: np.ndarray):
     """
     Calcula el polinomio interpolador que interpola los puntos [x,y] y evalúa ese polinomio en los puntos del array t
-    :param x: absicsas
+    :param x: abscisas
     :param y: ordenadas
     :param t: puntos donde se evalua el polinomio
     :return: np.array con los valores del polinomio en los puntos

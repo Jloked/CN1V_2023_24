@@ -1,9 +1,21 @@
-import numpy as np
+"""
+Interpolacion de Hermite
+https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_polin%C3%B3mica_de_Hermite
+"""
 from math import factorial
+
+import numpy as np
+
 from interpol_newton import polinomio_newton
 
 
 def coef_hermite(x: list, y: list):
+    """
+    Calcula los coeficientes en la forma de Newton interpolando a una funcion de la que se conocen algunos valores y algunas derivadas
+    :param x: abscisas donde se interpola
+    :param y: valores de la funcion en las abscisas, asi como, opcionalmente, de sus sucesivas derivadas. Debe ser una lista de listas, debe tener tantos elementos como x
+    :return: coef = array de coeficientes, nodos_rep = array con los nodos repetidos
+    """
     m = len(x)
 
     if len(y) != m:
@@ -23,7 +35,7 @@ def coef_hermite(x: list, y: list):
         for j in range(aux[i], aux[i + 1]):
             nodos_rep[j - 1] = x[i]
 
-    for k in range(n):  # TODO creo que no va por algo de aqui
+    for k in range(n + 1):
         for i in range(m, -1, -1):
             for j in range(aux[i] - 2, max(aux[i - 1], k + 1) - 2, -1):
                 if nodos_rep[j - k] == nodos_rep[j]:
@@ -34,14 +46,10 @@ def coef_hermite(x: list, y: list):
     return coef, nodos_rep
 
 
-def interpol_hermite(x: np.ndarray, y: list, t: np.ndarray):  # TODO
-    pass
-
-
 if __name__ == '__main__':
-    x = np.array([0, 1])
-    y = [[0, 0, 0], [1, 4]]
+    # p(x) = x^7 + 3x^5 -3x^2
+    x = np.array([0, 1, -1])
+    y = [[0, 0, -6, 0, 0, 360], [1], [-7]]
     c, nodos = coef_hermite(x, y)
     print(c)
     print(polinomio_newton(c, nodos))
-    print(polinomio_newton(np.array([0, 0, 0, 1, 1]), nodos))
