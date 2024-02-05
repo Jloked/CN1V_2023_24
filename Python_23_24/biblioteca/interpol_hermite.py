@@ -6,9 +6,6 @@ from math import factorial
 
 import numpy as np
 
-from interpol_newton import polinomio_newton
-
-
 def coef_hermite(x: list, y: list):
     """
     Calcula los coeficientes en la forma de Newton interpolando a una funcion de la que se conocen algunos valores y algunas derivadas
@@ -47,6 +44,7 @@ def coef_hermite(x: list, y: list):
 
 
 if __name__ == '__main__':
+    from interpol_newton import polinomio_newton
     # p(x) = x^7 + 3x^5 -3x^2
     x = np.array([0, 1, -1])
     y = [[0, 0, -6, 0, 0, 360], [1], [-7]]
