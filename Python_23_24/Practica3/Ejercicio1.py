@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.interpolate import interp1d
 
 from Python_23_24.biblioteca import interpol_hermite as her
 from Python_23_24.biblioteca import interpol_newton as new
