@@ -9,3 +9,4 @@ Alumnos internos: Paula Marín Turpín, Jesús González Abril
 
 - [Python Programming And Numerical Methods: A Guide For Engineers And Scientists](https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html)
 - [Documentacion de Numpy](https://numpy.org/doc/stable/)
+- [Harvard Applied Math 205 Advanced Scientific Computing: Numerical Methods](https://people.math.wisc.edu/~chr/am205/)
